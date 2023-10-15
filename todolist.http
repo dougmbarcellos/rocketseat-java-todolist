@@ -6,3 +6,35 @@ Content-Type: application/json
   "name": "Douglas",
   "password": "123"
 }
+
+###
+
+POST http://localhost:8080/tasks/ HTTP/1.1
+Authorization: Basic doug:123
+Content-Type: application/json
+
+{
+  "title":"Task",
+  "description": "Tarefa de teste Solange",
+  "priority": "ALTA",
+  "startAt": "2023-10-15T17:30:00",
+  "endAt": "2023-11-15T17:35:00"
+}
+
+###
+
+GET http://localhost:8080/tasks/ HTTP/1.1
+Authorization: Basic doug:123
+Content-Type: application/json
+
+
+###
+
+PUT http://localhost:8080/tasks/8cace10a-d903-496d-bed2-113eab5131cf HTTP/1.1
+Authorization: Basic doug:123
+Content-Type: application/json
+
+{
+  "title": "Update task",
+  "priority": "MEDIA"
+}
