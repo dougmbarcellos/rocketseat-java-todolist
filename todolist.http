@@ -1,4 +1,6 @@
-POST http://localhost:8080/users/ HTTP/1.1
+@apiUrl = https://todolist-rocket-tgv5.onrender.com
+
+POST {{apiUrl}}/users/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -9,7 +11,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/tasks/ HTTP/1.1
+POST {{apiUrl}}/tasks/ HTTP/1.1
 Authorization: Basic doug:123
 Content-Type: application/json
 
@@ -23,14 +25,14 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/tasks/ HTTP/1.1
+GET {{apiUrl}}/tasks/ HTTP/1.1
 Authorization: Basic doug:123
 Content-Type: application/json
 
 
 ###
 
-PUT http://localhost:8080/tasks/8cace10a-d903-496d-bed2-113eab5131cf HTTP/1.1
+PUT {{apiUrl}}/tasks/8cace10a-d903-496d-bed2-113eab5131cf HTTP/1.1
 Authorization: Basic doug:123
 Content-Type: application/json
 
